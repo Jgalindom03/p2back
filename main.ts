@@ -9,6 +9,7 @@ import getCliente from "./resolvers/getCliente.ts";
 import deleteCliente from "./resolvers/deleteCliente.ts";
 import postFactura from "./resolvers/postFactura.ts";
 import getFactura from "./resolvers/getFactura.ts";
+import getClientes from "./resolvers/getClientes.ts";
 import { load } from "https://deno.land/std@0.204.0/dotenv/mod.ts";
 
 const env = await load();
@@ -33,6 +34,7 @@ app
  .delete("/deleteProducto/:id", deleteProducto)
  .post("/postCliente", postCliente)
  .get("/getCliente/:name",getCliente )
+ .get("/getCliente",getClientes)
  .delete("/deleteCliente/:id", deleteCliente)
  .post("/postFactura",postFactura)
  .get("/getFactura/:id",getFactura)
