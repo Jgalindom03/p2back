@@ -34,7 +34,7 @@ app
  .delete("/deleteProducto/:id", deleteProducto)
  .post("/postCliente", postCliente)
  .get("/getCliente/:name",getCliente )
- .get("/getCliente",getClientes)
+ .get("/getClientes",getClientes)
  .delete("/deleteCliente/:id", deleteCliente)
  .post("/postFactura",postFactura)
  .get("/getFactura/:id",getFactura)
