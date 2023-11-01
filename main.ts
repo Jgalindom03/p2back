@@ -2,6 +2,7 @@ import express from "npm:express@4.18.2";
 import mongoose from "npm:mongoose@7.6.3";
 
 import getProducto from "./resolvers/getProducto.ts";
+import getProductos from "./resolvers/getProductos.ts";
 import postProducto from "./resolvers/postProducto.ts";
 import deleteProducto from "./resolvers/deleteProducto.ts";
 import postCliente from "./resolvers/postCliente.ts";
@@ -30,6 +31,7 @@ const app = express();
 app.use(express.json());
 app
  .get("/getProducto/:name", getProducto,)
+ .get("/getProductos",getProductos)
  .post("/api/postProducto", postProducto,)
  .delete("/deleteProducto/:id", deleteProducto)
  .post("/postCliente", postCliente)

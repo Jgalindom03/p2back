@@ -4,10 +4,6 @@ import ClienteModel from "../db/cliente.ts";
 const getClientes = async (req: Request, res: Response) => {
   try {
     const cliente = await ClienteModel.findOne().exec();
-    if (!cliente) {
-      res.status(404).send("Cliente not found");
-      return;
-    }
     res.status(200).send({
         name:cliente.name,
         cif:cliente.cif,
